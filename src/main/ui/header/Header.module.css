@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.main a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.active__link {
+    color: #e55b5b;
+}
+
