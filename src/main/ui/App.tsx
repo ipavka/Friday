@@ -6,6 +6,7 @@ import {SelfRouter} from "./routes/SelfRouter";
 const App = () => {
     return (
         <div className="App">
+            App
             <HashRouter>
                 <SelfRouter/>
             </HashRouter>
