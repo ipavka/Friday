@@ -10,9 +10,7 @@ const reducers = combineReducers({
     demonstrate: demonstrateReducer,
 })
 
-const store = createStore(reducers, applyMiddleware(thunk))
-
-export default store
+export const store = createStore(reducers, applyMiddleware(thunk))
 
 export type AppStoreType = ReturnType<typeof reducers>
 
