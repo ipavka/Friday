@@ -1,7 +1,8 @@
-import {combineReducers, legacy_createStore as createStore} from "redux";
+import {applyMiddleware, combineReducers, legacy_createStore as createStore} from "redux";
 import {profileReducer} from "./reducers/profile-reducer";
 import {registrationReducer} from "./reducers/registration-reducer";
 import {demonstrateReducer} from "./reducers/demonstrate-reducer";
+import thunk from "redux-thunk";
 
 const reducers = combineReducers({
     profile: profileReducer,
@@ -9,7 +10,7 @@ const reducers = combineReducers({
     demonstrate: demonstrateReducer,
 })
 
-const store = createStore(reducers)
+const store = createStore(reducers, applyMiddleware(thunk))
 
 export default store
 
